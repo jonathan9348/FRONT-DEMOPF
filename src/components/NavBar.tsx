@@ -1,6 +1,13 @@
 import React from "react";
 
-const NavBar = () => {
+interface Categories {
+    categories: Array<{
+        name: string,
+        url: string,
+    }>
+}
+
+const NavBar = ({categories}: Categories) => {
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
@@ -22,17 +29,10 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a className="nav-link active" aria-current="page" href="login">
                 Registrate
               </a>
             </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Link
-              </a>
-            </li>
-
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -43,29 +43,28 @@ const NavBar = () => {
               >
                 Categorías
               </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Top
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Buttom
-                  </a>
-                </li>
+              <ul className="dropdown-menu">                
+                {
+                    categories.map(category => {
+                        return (
+                            <li>
+                                <a className="dropdown-item" href={ category.url }>
+                                    { category.name } 
+                                </a>
+                            </li>
+                        )
+                    })
+                }
               </ul>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link disabled">Mi Cuenta</a>
+              <a className="nav-link" href="profile">
+                Mi Cuenta
+              </a>
             </li>
           </ul>
+
           <form className="d-flex" role="search">
             <input
               className="form-control me-2"
