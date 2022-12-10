@@ -106,6 +106,7 @@ function Product() {
   // TODO
   const product = products.find((p) => p.id.toString() === id);
 
+
   return (
     <>
         <div className="row pt-4">

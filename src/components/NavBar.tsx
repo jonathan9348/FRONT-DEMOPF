@@ -42,12 +42,16 @@ const NavBar = ({categories}: Categories) => {
                 aria-expanded="false"
               >
                 Categorías
+        
               </a>
               <ul className="dropdown-menu">                
                 {
                     categories.map(category => {
                         return (
                             <li>
+                            
+                          
+
                                 <a className="dropdown-item" href={ category.url }>
                                     { category.name } 
                                 </a>
