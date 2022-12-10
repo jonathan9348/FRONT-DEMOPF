@@ -24,7 +24,7 @@ export default function Footer(): any {
         </div>
       </div>
       <div>
-        <NavLink to="/contact">Contact us</NavLink>
+        <NavLink to="/contact">Contact us</NavLink> {/*Una redireccion para un futuro componente de contacto*/}
       </div>
     </footer>
   );
