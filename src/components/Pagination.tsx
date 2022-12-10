@@ -1,16 +1,15 @@
 import React from "react";
 
-
 export default function Pagination({
   allProducts,
   productPage,
   setPagination,
   actualPage,
-}:any) {
-  const numberPage= [];
+}: any) {
+  const numberPage = [];
 
   for (let i = 1; i <= Math.ceil(allProducts / productPage); i++) {
-                        //Math.ceil devuelve el entero mayor o igual mas proximo de un numero dado.
+    //Math.ceil devuelve el entero mayor o igual mas proximo de un numero dado.
     numberPage.push(i); // Ejemplo: Math.ceil(0.95) ==> (1)
   }
 
@@ -26,7 +25,8 @@ export default function Pagination({
               onClick={() => setPagination(n)}
               className={
                 actualPage === n ? "active items letters" : "items letters"
-              }>
+              }
+            >
               {n}
             </button>
           ))
