@@ -8,10 +8,38 @@ export default function Footer():any {
         <img src="" alt=""/>
         <div>
           <h3 className="">
-            Book
+            Nosotros
           </h3>
           <h3 className="">
-            Store
+            Henry
+          </h3>
+          <h3 className="">
+            Estudia con nosotros.
+          </h3>
+        </div>
+        <div>
+          <h3 className="">
+            Tienda Online
+          </h3>
+          <h3 className="">
+            Cómo comprar
+          </h3>
+          <h3 className="">
+            Términos y condiciones
+          </h3>
+          <h3 className="">
+            Cobertura
+          </h3>
+        </div>
+        <div>
+          <h3 className="">
+            Atención al cliente
+          </h3>
+          <h3 className="">
+            Preguntas frecuentes
+          </h3>
+          <h3 className="">
+            Políticas
           </h3>
         </div>
       </div>
